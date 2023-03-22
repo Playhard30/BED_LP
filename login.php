@@ -90,17 +90,29 @@ foreach ($settings as $setting) {
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <label for="username" class="form-label">Username</label>
-                                                    <input type="text" class="form-control text-black" id="username"
-                                                        name="username" aria-describedby="username"
-                                                        placeholder="Enter username">
+                                                    <input type="text"
+                                                        class="form-control text-black <?php echo (!empty($_SESSION['errorMessage']['username'])) ? $_SESSION['errorMessage']['username'][0] : '' ?>"
+                                                        id="username" name="username" aria-describedby="username"
+                                                        placeholder="Enter username"
+                                                        value="<?php echo (!empty($_SESSION['errorMessage']['formData'])) ? $_SESSION['errorMessage']['formData'][0] : '' ?>">
+                                                    <?php if (!empty($_SESSION['errorMessage']['username'])) {
+                                                        echo '<div class="invalid-feedback">' . $_SESSION['errorMessage']['username'][1] . '</div>';
+                                                    } ?>
+
+
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <label for="password" class="form-label">Password</label>
-                                                    <input type="password" class="form-control text-black" id="password"
-                                                        name="password" aria-describedby="password"
-                                                        placeholder="Enter password">
+                                                    <input type="password"
+                                                        class="form-control text-black <?php echo (!empty($_SESSION['errorMessage']['password'])) ? $_SESSION['errorMessage']['password'][0] : '' ?>"
+                                                        id="password" name="password" aria-describedby="password"
+                                                        placeholder="Enter password"
+                                                        value="<?php echo (!empty($_SESSION['errorMessage']['formData'])) ? $_SESSION['errorMessage']['formData'][1] : '' ?>">
+                                                    <?php if (!empty($_SESSION['errorMessage']['password'])) {
+                                                        echo '<div class="invalid-feedback">' . $_SESSION['errorMessage']['password'][1] . '</div>';
+                                                    } ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -144,5 +156,7 @@ foreach ($settings as $setting) {
         </section>
     </div>
 </body>
+
+<?php session_destroy(); ?>
 
 </html>
