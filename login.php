@@ -19,6 +19,12 @@ foreach ($settings as $setting) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Api KEY-->
+    <meta name="google_font_api" content="AIzaSyBG58yNdAjc20_8jAvLNSVi9E4Xhwjau_k">
+    <!-- Config Options -->
+    <meta name="setting_options"
+        content='{&quot;saveLocal&quot;:&quot;sessionStorage&quot;,&quot;storeKey&quot;:&quot;huisetting-html&quot;,&quot;setting&quot;:{&quot;app_name&quot;:{&quot;value&quot;:&quot; <?php echo (!empty($schoolName)) ? $schoolName : ""; ?>&quot;},&quot;theme_scheme_direction&quot;:{&quot;value&quot;:&quot;ltr&quot;},&quot;theme_scheme&quot;:{&quot;value&quot;:&quot;light&quot;},&quot;theme_style_appearance&quot;:{&quot;value&quot;:[&quot;theme-default&quot;]},&quot;theme_color&quot;:{&quot;colors&quot;:{&quot;--{{prefix}}primary&quot;:&quot;#8d1b1b&quot;,&quot;--{{prefix}}info&quot;:&quot;#5f5d5d&quot;},&quot;value&quot;:&quot;theme-color-default&quot;},&quot;theme_transition&quot;:{&quot;value&quot;:&quot;theme-with-animation&quot;},&quot;theme_font_size&quot;:{&quot;value&quot;:&quot;theme-fs-md&quot;},&quot;page_layout&quot;:{&quot;value&quot;:&quot;container-fluid&quot;},&quot;header_navbar&quot;:{&quot;value&quot;:&quot;default&quot;},&quot;header_banner&quot;:{&quot;value&quot;:&quot;default&quot;},&quot;sidebar_color&quot;:{&quot;value&quot;:&quot;sidebar-white&quot;},&quot;card_color&quot;:{&quot;value&quot;:&quot;card-default&quot;},&quot;sidebar_type&quot;:{&quot;value&quot;:[]},&quot;sidebar_menu_style&quot;:{&quot;value&quot;:&quot;left-bordered&quot;},&quot;footer&quot;:{&quot;value&quot;:&quot;default&quot;},&quot;body_font_family&quot;:{&quot;value&quot;:null},&quot;heading_font_family&quot;:{&quot;value&quot;:null}}}'>
+    <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo (!empty($schoolLogo)) ? "./assets/images/logo/" . $schoolLogo : ""; ?>"
         type="image/x-icon">
     <title>Login |
@@ -29,20 +35,20 @@ foreach ($settings as $setting) {
     <link rel="stylesheet" href="./assets/css/core/libs.min.css" />
 
     <!-- Hope Ui Design System Css -->
-    <link rel="stylesheet" href="./assets/css/hope-ui.min.css?v=2.2.0" />
-    <link rel="stylesheet" href="./assets/css/pro.min.css?v=2.2.0" />
+    <link rel="stylesheet" href="./assets/css/hope-ui.min.css" />
+    <link rel=" stylesheet" href="./assets/css/pro.min.css" />
 
     <!-- Custom Css -->
-    <link rel="stylesheet" href="./assets/css/custom.min.css?v=2.2.0" />
+    <link rel=" stylesheet" href="./assets/css/custom.min.css" />
 
     <!-- Dark Css -->
-    <link rel="stylesheet" href="./assets/css/dark.min.css?v=2.2.0" />
+    <link rel=" stylesheet" href="./assets/css/dark.min.css" />
 
     <!-- Customizer Css -->
-    <link rel="stylesheet" href="./assets/css/customizer.min.css?v=2.2.0" />
+    <link rel=" stylesheet" href="./assets/css/customizer.min.css" />
 
     <!-- RTL Css -->
-    <link rel="stylesheet" href="./assets/css/rtl.min.css?v=2.2.0" />
+    <link rel="stylesheet" href="./assets/css/rtl.min.css" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +56,7 @@ foreach ($settings as $setting) {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="">
     <div class="wrapper">
         <section class="login-content">
             <div class="row m-0 align-items-center bg-white vh-100">
@@ -59,8 +65,7 @@ foreach ($settings as $setting) {
                         <div class="col-md-10">
                             <div class="card card-transparent shadow-none d-flex justify-content-center mb-0 auth-card">
                                 <div class="card-body">
-                                    <a href="../../dashboard/index.html"
-                                        class="navbar-brand d-flex align-items-center mb-3">
+                                    <a href="./login" class="navbar-brand d-flex align-items-center mb-3">
                                         <!--Logo start-->
                                         <!--logo End-->
 
@@ -71,17 +76,12 @@ foreach ($settings as $setting) {
                                                     alt="schoolLogo" width="50" height="50">
                                             </div>
                                             <div class="logo-mini">
-
+                                                <img src="<?php echo (!empty($schoolLogo)) ? "./assets/images/logo/" . $schoolLogo : ""; ?>"
+                                                    alt="schoolLogo" width="20" height="20">
                                             </div>
                                         </div>
                                         <!--logo End-->
-
-
-
-
-                                        <h4 class="logo-title ms-3 mb-0" style="color: #910818;">
-                                            <?php echo (!empty($schoolName)) ? $schoolName : ""; ?>
-                                        </h4>
+                                        <h4 class="logo-title ms-3 mb-0" data-setting="app_name"></h4>
                                     </a>
                                     <h2 class="mb-2 text-center">Sign In</h2>
                                     <p class="text-center">Sign in to your account.</p>
@@ -155,7 +155,37 @@ foreach ($settings as $setting) {
             </div>
         </section>
     </div>
+
+
+    <!-- Library Bundle Script -->
+    <script src="./assets/js/core/libs.min.js"></script>
+
+    <!-- Slider-tab Script -->
+    <script src="./assets/js/plugins/slider-tabs.js"></script>
+
+    <!-- Lodash Utility -->
+    <script src="./assets/vendor/lodash/lodash.min.js"></script>
+    <!-- Utilities Functions -->
+    <script src="./assets/js/iqonic-script/utility.min.js"></script>
+    <!-- Settings Script -->
+    <script src="./assets/js/iqonic-script/setting.min.js"></script>
+    <!-- Settings Init Script -->
+    <script src="./assets/js/setting-init.js"></script>
+    <!-- External Library Bundle Script -->
+    <script src="./assets/js/core/external.min.js"></script>
+    <!-- Widgetchart Script -->
+    <script src="./assets/js/charts/widgetcharts.js" defer></script>
+    <!-- Dashboard Script -->
+    <script src="./assets/js/charts/dashboard.js" defer></script>
+    <script src="./assets/js/charts/alternate-dashboard.js" defer></script>
+    <!-- Hopeui Script -->
+    <script src="./assets/js/hope-ui.js" defer></script>
+    <script src="./assets/js/hope-uipro.js" defer></script>
+    <script src="./assets/js/sidebar.js" defer></script>
+
 </body>
+
+
 
 <?php session_destroy(); ?>
 

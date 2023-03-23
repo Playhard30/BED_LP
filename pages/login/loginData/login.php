@@ -23,6 +23,7 @@ if (isset($_POST['signin']) && $_SERVER['REQUEST_METHOD'] == "POST") {
             $_SESSION['userID'] = $settings[0]['id'];
             $_SESSION['role'] = $settings[0]['role'];
             $_SESSION['username'] = $settings[0]['username'];
+            $_SESSION['fullname'] = $settings[0]['fullname'];
             $_SESSION['email'] = $settings[0]['email'];
 
             header("location: ../../dashboard/");
