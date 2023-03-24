@@ -1,5 +1,6 @@
 <?php
 include("../../inc/connection.php");
+include("../../inc/session.php");
 
 $query = "CALL sp_getSchoolSettings";
 $settings = $conn->execQuery($query);

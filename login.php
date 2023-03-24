@@ -1,6 +1,11 @@
 <?php
 include("./inc/connection.php");
 
+if (!empty($_SESSION['userID']) && !empty($_SESSION['role'])) {
+    header("location: pages/dashboard");
+    exit();
+}
+
 $query = "CALL sp_getSchoolSettings";
 $settings = $conn->execQuery($query);
 
