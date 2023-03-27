@@ -1,6 +1,10 @@
 <!-- header -->
 <?php $pageTitle = "Home";
-include("../../inc/header.php"); ?>
+// css extension
+$links = array('<link rel="stylesheet" href="../../assets/vendor/flatpickr/dist/flatpickr.min.css" />');
+
+include("../../inc/header.php");
+?>
 
 <body class=" ">
 
@@ -177,28 +181,23 @@ include("../../inc/header.php"); ?>
                                         <div class="d-flex align-items-center iq-slider mb-4 gap-2">
                                             <div>
                                                 <img class="rounded-circle bg-soft-primary img-fluid avatar-40 mb-2"
-                                                    src="../../assets/images/logo/sfacLogo.png" alt="profile"
-                                                    loading="lazy" />
+                                                    src="../assets/images/table/1.png" alt="profile" loading="lazy" />
                                             </div>
                                             <div>
                                                 <img class="rounded-circle bg-soft-primary img-fluid avatar-40 mb-2"
-                                                    src="../../assets/images/logo/sfacLogo.png" alt="profile"
-                                                    loading="lazy" />
+                                                    src="../assets/images/table/2.png" alt="profile" loading="lazy" />
                                             </div>
                                             <div>
                                                 <img class="rounded-circle bg-soft-primary img-fluid avatar-40 mb-2"
-                                                    src="../../assets/images/logo/sfacLogo.png" alt="profile"
-                                                    loading="lazy" />
+                                                    src="../assets/images/table/3.png" alt="profile" loading="lazy" />
                                             </div>
                                             <div>
                                                 <img class="rounded-circle bg-soft-primary img-fluid avatar-40 mb-2"
-                                                    src="../../assets/images/logo/sfacLogo.png" alt="profile"
-                                                    loading="lazy" />
+                                                    src="../assets/images/table/4.png" alt="profile" loading="lazy" />
                                             </div>
                                             <div>
                                                 <img class="rounded-circle bg-soft-primary img-fluid avatar-40 mb-2"
-                                                    src="../../assets/images/logo/sfacLogo.png" alt="profile"
-                                                    loading="lazy" />
+                                                    src="../assets/images/table/5.png" alt="profile" loading="lazy" />
                                             </div>
                                         </div>
                                         <div>

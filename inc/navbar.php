@@ -23,7 +23,8 @@
             </div>
             <div class="d-flex align-items-center justify-content-between product-offcanvas">
                 <div class="breadcrumb-title me-3 pe-3 d-none d-xl-block">
-                    <small class="mb-0 text-capitalize text-primary">Home</small>
+                    <small
+                        class="mb-0 text-capitalize text-primary"><?php echo (!empty($pageTitle)) ? $pageTitle : ""; ?></small>
                 </div>
 
             </div>
@@ -313,7 +314,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../../assets/images/logo/sfacLogo.png" alt="User-Profile"
                                 class="img-fluid avatar avatar-50 avatar-rounded">
-                            <div class="caption ms-3 d-none d-md-block ">
+                            <div class="caption ms-3 d-none d-sm-block">
                                 <h6 class="mb-0 caption-title">
                                     <?php echo (!empty($_SESSION['fullname'])) ? $_SESSION['fullname'] : $_SESSION['username']; ?>
                                 </h6>
@@ -341,5 +342,6 @@
                 </ul>
             </div>
         </div>
-    </nav> <!--Nav End-->
+    </nav>
+    <!--Nav End-->
 </div>

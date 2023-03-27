@@ -288,6 +288,7 @@ Index Of Script
     if ($('[data-toggle="data-table"]').length) {
       $('[data-toggle="data-table"]').DataTable({
         "autoWidth": false,
+        "ordering": false,
         "dom": '<"row align-items-center"<"col-md-6" l><"col-md-6" f>><"table-responsive my-3" rt><"row align-items-center" <"col-md-6" i><"col-md-6" p>><"clear">',
       });
     }

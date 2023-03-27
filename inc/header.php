@@ -29,7 +29,7 @@ foreach ($settings as $setting) {
     <meta name="google_font_api" content="AIzaSyBG58yNdAjc20_8jAvLNSVi9E4Xhwjau_k">
     <!-- Config Options -->
     <meta name="setting_options" content='{
-    "saveLocal": "none",
+    "saveLocal": "sessionStorage",
     "storeKey": "huisetting-html",
     "setting": {
         "app_name": {
@@ -54,7 +54,7 @@ foreach ($settings as $setting) {
             "value": "custom"
         },
         "theme_transition": {
-            "value": "theme-with-animation"
+            "value": "theme-without-animation"
         },
         "theme_font_size": {
             "value": "theme-fs-md"
@@ -104,13 +104,13 @@ foreach ($settings as $setting) {
     <!-- Library / Plugin Css Build -->
     <link rel="stylesheet" href="../../assets/css/core/libs.min.css" />
 
-    <!-- Flatpickr css -->
-    <link rel="stylesheet" href="../../assets/vendor/flatpickr/dist/flatpickr.min.css" />
+    <!-- css extension -->
+    <?php if (!empty($links)) {
+        foreach ($links as $link) {
+            echo $link;
+        }
 
-
-
-
-
+    } ?>
 
     <!-- Hope Ui Design System Css -->
     <link rel="stylesheet" href="../../assets/css/hope-ui.min.css" />
